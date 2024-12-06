@@ -57,6 +57,7 @@ class DB{
             $id=$array['id'];
             unset($array['id']);
             $set=$this->a2s($array);
+            dd($set);
             $sql ="UPDATE $this->table SET ".join(',',$set)." where `id`='$id'";
                 
         }else{
@@ -89,6 +90,7 @@ class DB{
      */
     function a2s($array){
         $tmp=[];
+
         foreach($array as $key => $value){
             $tmp[]="`$key`='$value'";
         }
@@ -161,3 +163,4 @@ function to($url){
 
 
 $Title=new DB('titles');
+$Ad=new DB('ads');

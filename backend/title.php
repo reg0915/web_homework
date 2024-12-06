@@ -33,7 +33,7 @@
                             <img src="./upload/<?=$row['img'];?>" style="width:300px;height:30px;">
                         </td>
                         <td width="23%">
-                            <input type="text" name="text" value="<?=$row['text'];?>">
+                            <input type="text" name="text[]" value="<?=$row['text'];?>">
                         </td>
                         <td width="7%">
                             <input type="radio" name="sh" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':'';?>>
