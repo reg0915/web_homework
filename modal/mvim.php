@@ -1,6 +1,6 @@
 <h3 class="cent">新增動畫圖片</h3>
 <hr>
-<form action="api/insert_title.php" method="post" enctype="multipart/form-date">
+<form action="api/insert.php" method="post" enctype="multipart/form-date">
 
     <table>
         <tr>
@@ -10,7 +10,7 @@
 
     </table>
     <div class="cent">
-
+        <input type="hidden" name="table" value="<?=$_GET['table'];?>">
         <input type="submit" value="新增">
         <input type="reset" value="重置">
 
