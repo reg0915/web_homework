@@ -5,21 +5,19 @@
         <tbody>
             <tr>
                 <td style="width:70%;font-weight:800; border:#333 1px solid; border-radius:3px;" class="cent"><a
-                        href="?do=admin" style="color:#000; text-decoration:none;">後台管理區</a>
-                </td>
+                        href="?do=admin" style="color:#000; text-decoration:none;">後台管理區</a></td>
                 <td><button onclick="document.cookie=&#39;user=&#39;;location.replace(&#39;?&#39;)"
                         style="width:99%; margin-right:2px; height:50px;">管理登出</button></td>
             </tr>
         </tbody>
     </table>
     <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-        <p class="t cent botli">動態圖片管理</p>
+        <p class="t cent botli">動畫圖片管理</p>
         <form method="post" action="./api/edit.php">
             <table width="100%">
                 <tbody>
                     <tr class="yel">
-                        <td width="70%">動態圖片</td>
-
+                        <td width="70%">動畫圖片</td>
                         <td width="10%">顯示</td>
                         <td width="10%">刪除</td>
                         <td></td>
@@ -41,7 +39,7 @@
                         </td>
                         <td>
                             <input type="button"
-                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/upload_<?=$do;?>.php?id=<?=$row['id'];?>&#39;)"
+                                onclick="op('#cover','#cvr','./modal/upload_<?=$do;?>.php?id=<?=$row['id'];?>&table=<?=$do;?>')"
                                 value="更換動畫">
                         </td>
                         <input type="hidden" name="id[]" value="<?=$row['id'];?>">
@@ -49,7 +47,6 @@
                     <?php
                     }
                     ?>
-
                 </tbody>
             </table>
             <table style="margin-top:40px; width:70%;">
@@ -57,11 +54,9 @@
                     <tr>
                         <td width="200px">
                             <input type="button"
-                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php&#39;)"
-                                value="新增網站標題圖片">
+                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php?table=<?=$do;?>&#39;)"
+                                value="新增動畫圖片">
                         </td>
-                        onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php?table=<?=$do;?>&#39;)"
-                        value="新增動畫圖片"></td>
                         <td class="cent">
                             <input type="hidden" name="table" value="<?=$do;?>">
                             <input type="submit" value="修改確定">
