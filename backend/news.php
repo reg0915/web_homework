@@ -24,9 +24,16 @@
                         <td></td>
                     </tr>
                     <?php
-                    $rows=$News->all();
-                    foreach($rows as $row){
-                    ?>
+
+$div=4;
+$total=$News->count();
+$pages=ceil($total/$div);
+$now=$_GET['p']??1;
+$start=($now-1)*$div;
+
+$rows=$News->all(" limit $start,$div");
+foreach($rows as $row){
+?>
                     <tr>
                         <td>
                             <textarea name="text[]" style="width:95%;height:60px;"><?=$row['text'];?></textarea>
@@ -48,23 +55,24 @@
                 </tbody>
             </table>
             <div class="cent">
+
                 <?php
-                if(($now-1)>0){
-                    $prev=$now-1;
-                    echo "<a href='?do=$do&p=$prev'> < </a>";
-                }
-                
-                
-                for($i=1;$i<=$pages;$i++){
-                    echo "<a href='?do=$do&p=$i'> ";
-                    echo $i;
-                    echo " </a>";
-                }
-                if(($now+1)<=$pages){
-                    $next=$now+1;
-                    echo "<a href='?do=$do&p=$next'> > </a>";
-                }
-            ?>
+
+if(($now-1)>0){
+    $prev=$now-1;
+    echo "<a href='?do=$do&p=$prev'> < </a>";
+}
+for($i=1;$i<=$pages;$i++){
+    echo "<a href='?do=$do&p=$i'> ";
+    echo $i;
+    echo " </a>";
+}
+if(($now+1)<=$pages){
+    $next=$now+1;
+    echo "<a href='?do=$do&p=$next'> > </a>";
+}
+
+?>
             </div>
             <table style="margin-top:40px; width:70%;">
                 <tbody>

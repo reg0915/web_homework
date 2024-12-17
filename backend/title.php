@@ -28,6 +28,7 @@
                     $rows=$Title->all();
                     foreach($rows as $row){
                     ?>
+                    debugger;
                     <tr>
                         <td width="45%">
                             <img src="./upload/<?=$row['img'];?>" style="width:300px;height:30px;">
