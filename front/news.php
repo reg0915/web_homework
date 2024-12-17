@@ -42,7 +42,7 @@
                 }
                 for($i=1;$i<=$pages;$i++){
                     $size=($i==$now)?"24px":"16px";
-                    echo "<a href='?do=$do&p=$i'> style='font-size:$size'";
+                    echo "<a href='?do=$do&p=$i' style='font-size:$size'> ";
                     echo $i;
                     echo " </a>";
                 }

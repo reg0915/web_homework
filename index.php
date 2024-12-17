@@ -80,6 +80,12 @@
                     onclick="lo(&#39;?do=admin&#39;)">管理登入</button>
                 <div style="width:89%; height:480px;" class="dbor">
                     <span class="t botli">校園映象區</span>
+                    <div class='cent' id='up'>
+                        <img src="./icon/up.jpg" alt="" srcset="">
+                    </div>
+
+
+
                     <script>
                     var nowpage = 0,
                         num = 0;
