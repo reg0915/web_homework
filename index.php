@@ -83,7 +83,20 @@
                     <div class='cent' id='up'>
                         <img src="./icon/up.jpg" alt="" srcset="">
                     </div>
+                    <div class='cent'>
+                        <?php
+                        $imgs=$Image->all(['sh'=>1]);
+                        foreach($imgs as $img){
+                            echo "<div>";
+                            echo "<img src='./upload/{$img['img']}' style='width:150px;height:103px;border:3px solid orange'>";
+                            echo "</div>";
+                        }
 
+                        ?>
+                    </div>
+                    <div class='cent' id="dn">
+                        <img src="./icon/dn.jpg" alt="">
+                    </div>
 
 
                     <script>
