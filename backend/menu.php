@@ -25,7 +25,7 @@
                         <td></td>
                     </tr>
                     <?php
-                    $row=$Menu->all(['main_id=>0']);
+                    $rows=$Menu->all(['main_id'=>0]);
                     foreach($rows as $row){
                         
 

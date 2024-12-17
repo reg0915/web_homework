@@ -34,6 +34,32 @@
                 <div id="menuput" class="dbor">
                     <!--主選單放此-->
                     <span class="t botli">主選單區</span>
+                    <?php
+ $mains=$Menu->all(['sh'=>1,'main_id'=>0]);
+ foreach($mains as $main){
+     echo "<div class='mainmu cent'>";
+     echo "<a href='{$main['href']}'>";
+     echo $main['text'];
+     echo "</a>";
+
+     echo "<div class='mw'>";
+// if(有次選單){    
+// }
+if($Menu->count(['main_id'=>$main['id']])>0){
+    $subs=$Menu->all(['main_id'=>$main['id']]);
+foreach($subs as $sub){
+    echo "<div class='mainmu cent'>";
+    echo "<a herf='{$sub['herf']}'>";
+    echo $sub['text'];
+    echo "</a>";
+    echo "</div>";
+}
+}
+     echo "</div>";
+     echo "</div>";
+ }
+
+                    ?>
                 </div>
                 <div class="dbor" style="margin:3px; width:95%; height:20%; line-height:100px;">
                     <span class="t">進站總人數 :
@@ -85,12 +111,12 @@
                     </div>
                     <div class='cent'>
                         <?php
-                        $imgs=$Image->all(['sh'=>1]);
-                        foreach($imgs as $img){
-                            echo "<div>";
-                            echo "<img src='./upload/{$img['img']}' style='width:150px;height:103px;border:3px solid orange'>";
-                            echo "</div>";
-                        }
+                         $imgs=$Image->all(['sh'=>1]);
+                         foreach($imgs as $idx => $img){
+                             echo "<div class='im' id='ssaa{$idx}'>";
+                             echo "<img src='./upload/{$img['img']}' style='width:150px;height:103px;border:3px solid orange'>";
+                             echo "</div>";
+                         }
 
                         ?>
                     </div>
@@ -101,14 +127,15 @@
 
                     <script>
                     var nowpage = 0,
-                        num = 0;
+                        num = <?=$Image->count(['sh'=>1]);?>;
 
                     function pp(x) {
                         var s, t;
                         if (x == 1 && nowpage - 1 >= 0) {
                             nowpage--;
                         }
-                        if (x == 2 && (nowpage + 1) * 3 <= num * 1 + 3) {
+                        if (x == 2 && (nowpage + 1) <= num * 1 - 3) {
+
                             nowpage++;
                         }
                         $(".im").hide()
