@@ -25,15 +25,15 @@
                     </tr>
                     <?php
 
-$div=4;
-$total=$News->count();
-$pages=ceil($total/$div);
-$now=$_GET['p']??1;
-$start=($now-1)*$div;
-
-$rows=$News->all(" limit $start,$div");
-foreach($rows as $row){
-?>
+                       $div=4;
+                       $total=$News->count();
+                       $pages=ceil($total/$div);
+                       $now=$_GET['p']??1;
+                       $start=($now-1)*$div;
+                       
+                       $rows=$News->all(" limit $start,$div");
+                       foreach($rows as $row){
+                     ?>
                     <tr>
                         <td>
                             <textarea name="text[]" style="width:95%;height:60px;"><?=$row['text'];?></textarea>
@@ -63,7 +63,8 @@ if(($now-1)>0){
     echo "<a href='?do=$do&p=$prev'> < </a>";
 }
 for($i=1;$i<=$pages;$i++){
-    echo "<a href='?do=$do&p=$i'> ";
+    $size=($i==$now)?"24px":"16px";
+    echo "<a href='?do=$do&p=$i'> style='font-size:$size'";
     echo $i;
     echo " </a>";
 }
