@@ -1,7 +1,14 @@
 <?php
+if(isset($_SESSION['login'])){
+	to("admin.php");
+	exit();	
+}
 
 if(isset($_POST['acc'])){
-	if($_POST['acc']=='admin' && $_POST['ps']=='1234'){
+	$row=$Admin->find(['acc'=>$_POST['acc'],'pw'=>$_POST['ps']]);
+
+	// if(!empty($row))
+	if(!empty($row)){
 		$_SESSION['login']=1;
 		to("admin.php");
 	}else{
