@@ -35,31 +35,31 @@
                     <!--主選單放此-->
                     <span class="t botli">主選單區</span>
                     <?php
- $mains=$Menu->all(['sh'=>1,'main_id'=>0]);
- foreach($mains as $main){
-     echo "<div class='mainmu cent'>";
-     echo "<a href='{$main['href']}'>";
-     echo $main['text'];
-     echo "</a>";
-
-     echo "<div class='mw'>";
-// if(有次選單){    
-// }
-if($Menu->count(['main_id'=>$main['id']])>0){
-    $subs=$Menu->all(['main_id'=>$main['id']]);
-foreach($subs as $sub){
-    echo "<div class='mainmu cent'>";
-    echo "<a herf='{$sub['herf']}'>";
-    echo $sub['text'];
-    echo "</a>";
-    echo "</div>";
-}
-}
-     echo "</div>";
-     echo "</div>";
- }
-
-                    ?>
+                      $mains=$Menu->all(['sh'=>1,'main_id'=>0]);
+                      foreach($mains as $main){
+                          echo "<div class='mainmu cent'>";
+                          echo "<a href='{$main['href']}'>";
+                          echo $main['text'];
+                          echo "</a>";
+                     
+                          echo "<div class='mw'>";
+                     // if(有次選單){    
+                     // }
+                     if($Menu->count(['main_id'=>$main['id']])>0){
+                         $subs=$Menu->all(['main_id'=>$main['id']]);
+                     foreach($subs as $sub){
+                         echo "<div class='mainmu cent'>";
+                         echo "<a herf='{$sub['herf']}'>";
+                         echo $sub['text'];
+                         echo "</a>";
+                         echo "</div>";
+                     }
+                     }
+                          echo "</div>";
+                          echo "</div>";
+                      }
+                     
+                                         ?>
                 </div>
                 <div class="dbor" style="margin:3px; width:95%; height:20%; line-height:100px;">
                     <span class="t">進站總人數 :
@@ -103,7 +103,7 @@ foreach($subs as $sub){
             <div class="di di ad" style="height:540px; width:23%; padding:0px; margin-left:22px; float:left; ">
                 <!--右邊-->
                 <button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;"
-                    onclick="lo(&#39;?do=admin&#39;)">管理登入</button>
+                    onclick="lo(&#39;?do=login&#39;)">管理登入</button>
                 <div style="width:89%; height:480px;" class="dbor">
                     <span class="t botli">校園映象區</span>
                     <div class='cent' id='up'>
