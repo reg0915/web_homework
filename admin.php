@@ -1,5 +1,5 @@
 ﻿<?php include_once "api/db.php";
-session_start();
+
 if(!isset($_SESSION['login'])){
     echo "請從登入頁登入<a href='index.php?do=login'>管理登入</a>";
     exit();
@@ -57,7 +57,7 @@ if(!isset($_SESSION['login'])){
                     </a>
                     <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=image">
                         <div class="mainmu">
-                            校園映象資料管理 </div>
+                            產品資料管理 </div>
                     </a>
                     <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=total">
                         <div class="mainmu">
