@@ -171,7 +171,7 @@ $Admin=new DB('admin');
 $Menu=new DB('Menus');
 $Total=new DB('total');
 $Bottom=new DB('bottom');
-
+$Question=new DB('questions');
 
 if(!isset($_SESSION['view'])){
     

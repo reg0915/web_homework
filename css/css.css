@@ -11,7 +11,7 @@ body {
 	height: 100%;
 	position: fixed;
 	z-index: 5;
-	background: rgba(51, 51, 51, 0.4);
+	background: rgba(0, 0, 0, 0.6);
 	top: 0px;
 	left: 0px;
 	overflow: auto;
@@ -25,7 +25,7 @@ body {
 	min-height: 300px;
 	position: absolute;
 	z-index: 5;
-	background: #ffffff;
+	background: #F5F5F5;
 	top: 0px;
 	left: 0px;
 	right: 0px;
@@ -38,7 +38,7 @@ body {
 	width: 1024px;
 	height: 768px;
 	margin: 10px auto 10px auto;
-	border: #EE7728 1px solid;
+	border: #C8A165 1px solid;
 	position: relative;
 }
 
@@ -51,7 +51,7 @@ body {
 }
 
 .dbor {
-	border: #EE7728 double 3px;
+	border: #C8A165 double 3px;
 	margin: 1px;
 	padding: 2px 10px 2px 10px;
 }
@@ -64,7 +64,7 @@ body {
 }
 
 .botli {
-	border-bottom: #333 1px solid;
+	border-bottom: #555 1px solid;
 }
 
 .mainmu {
@@ -85,7 +85,7 @@ body {
 .mainmu2 {
 	position: relative;
 	border-radius: 10px;
-	background: url(../icon/menu3.fw.png)center no-repeat;
+	background: url(../icon/menu3.fw.png) center no-repeat;
 	background-size: 100% 100%;
 	line-height: 30px;
 	padding: 2px 10px 2px 10px;
@@ -127,16 +127,16 @@ body {
 
 input,
 button {
-	border: #999 1px solid;
+	border: #777 1px solid;
 	border-radius: 3px;
-	background: #EFEFEF;
+	background: #EAEAEA;
 	padding: 5px;
 	margin: 3px;
 }
 
 input:active,
 button:active {
-	background: #E6E6E6;
+	background: #D6D6D6;
 }
 
 input[type=text],
@@ -146,11 +146,11 @@ input[type=password] {
 
 input:focus,
 button:focus {
-	box-shadow: #09C 0px 0px 3px .3px;
+	box-shadow: #C8A165 0px 0px 3px .3px;
 }
 
 .yel td {
-	background: #F3DA49;
+	background: #C8A165;
 	text-align: center;
 }
 
@@ -159,7 +159,7 @@ button:focus {
 }
 
 .bl {
-	color: #0CF;
+	color: #A67C52;
 	cursor: pointer;
 	text-decoration: none;
 }
