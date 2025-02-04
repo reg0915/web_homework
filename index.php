@@ -9,7 +9,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>卓越科技大學校園資訊系統</title>
+    <title>文藝室內設計</title>
     <link href="./css/css.css" rel="stylesheet" type="text/css">
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/js.js"></script>
@@ -123,7 +123,7 @@
 
                 ?>
                 <div style="width:89%; height:480px;" class="dbor">
-                    <span class="t botli">校園映象區</span>
+                    <span class="t botli">現場實際照</span>
                     <div class='cent' id='up'>
                         <img src="./icon/up.jpg" alt="" srcset="">
                     </div>

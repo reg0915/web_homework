@@ -7,13 +7,13 @@
             <tbody>
 
                 <label for="name">姓名:</label><br>
-                <input type="text" name="name[]" value="<?=$row['name'];?>"><br><br>
+                <input type="text" name="name" id="name"><br><br>
 
                 <label for="email">電子郵件:</label><br>
-                <input type="text" name="mail[]" value="<?=$row['mail'];?>"><br><br>
+                <input type="text" name="mail" id="mail"><br><br>
 
                 <label for="feedback">意見反饋:</label><br>
-                <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+                <textarea id="feedback" name="content" rows="4" cols="50" required></textarea><br><br>
 
                 <input type="submit" value="提交">
 
